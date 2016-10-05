@@ -207,3 +207,7 @@ New-ModuleManifest -Path c:\scripts\MTLPUG.psd1 -RootModule 'MTLPUG.psm1'
 #  Report on AD Groups that are empty
 #  Create a Graphical Interface that retrieve the process
 #  
+
+# Funny scripts
+# Lee Holmes - Never Let You Down
+#  iex (New-Object Net.WebClient).DownloadString("http://bit.ly/e0Mw9w")
