@@ -1,5 +1,5 @@
-# MTLPUG Learning Group 2016/10/04
-#  Link: https://www.meetup.com/MontrealPowerShellUserGroup/events/234309971/
+# MTLPUG Learning Group 2016/06/28
+#  Link: http://www.meetup.com/MontrealPowerShellUserGroup/events/230649907/
 
 <#
 
@@ -71,8 +71,8 @@ Get-Help Get-Service -ShowWindow
 
 
 # Brackets
-{}
-()
+{} # ScriptBlock
+() # 
 []
 ''
 ""
@@ -85,8 +85,6 @@ $Process = Get-process
 $process.name
 $process.refresh()
 Get-Process -OutVariable a
-
-
 
 
 <# Help #>
@@ -133,21 +131,27 @@ New-alias
 # Discover commands
 *-Service #press tab, tab, tab to see the cmdlet available finishing by '-service'
 
-# Concept of PowerShell Object versus the legacy command
-
-
+# operators
+-eq
+-lt
+-le
+-gt
+-ge
+-match
+$matches
+-like
+-notlike
 
 # Condition
+if(){}
+elseif(){}
+else{}
 
-
-# operators
-
-
-
-
-
-
-
+# Looping
+while(){}
+do{}while()
+get-process | foreach {}
+foreach ($i in $process){}
 
 
 
@@ -165,10 +169,7 @@ $Profile
    .psd1 Manifest, where you store information on the module, metadata
 #>
 
-# See module MTLPUG
-# Generating a new manifest
-New-ModuleManifest -Path c:\scripts\MTLPUG.psd1 -RootModule 'MTLPUG.psm1'
-
+# PARSING
 # Variables, used to store data (while your session is alive)
 $Netstat = netstat -n
 # Show the output
@@ -190,13 +191,14 @@ get-process | ConvertTo-Html
 # regex
 
 
-
-
 #legacy command
 #reporting
 #parsing
 # how to implement whatif
 
+# MODULE
+# Generating a new manifest
+New-ModuleManifest -Path c:\scripts\MTLPUG.psd1 -RootModule 'MTLPUG.psm1'
 
 # Examples of projects
 #  Inventory of Computer or multiple computers (CSV or HTML or both)
